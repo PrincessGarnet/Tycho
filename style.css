@@ -1,0 +1,140 @@
+/*Global*/
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	padding-top: 7em;
+	transition: 0.3s;
+}
+
+
+/*Fonts*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900i|Raleway');
+	
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Playfair Display', Arial, Times New Roman, serif;
+}
+
+h1 {
+	font-style: italic;
+	font-weight: 900;
+	font-size: 50px;
+	margin: 0;
+}
+
+p {
+	font-family: 'Raleway', Arial, Times New Roman, sans-serif;
+	margin: 0;
+}
+
+/*Body*/
+
+#background {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	z-index: -9999;
+	position: absolute;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 800px;
+	height: 50%;
+	transition: 0.5s;
+	border-radius: 50px;
+}
+
+
+/*Strip Animation*/
+
+@keyframes imageslide {
+	0% {
+		background-image: url(white%20mini.png);
+		background-size: cover;
+	}
+	20% {
+		background-image: url(Grand%20Central%20Mini.png);
+		background-size: cover;
+	}
+	40% {
+		background-image: url(Misty%20Richmond%20Mini.png);
+		background-size: cover;
+	}
+	60% {
+		background-image: url(New%20York%20Mini.png);
+		background-size: cover;
+	}
+	80% {
+		background-image: url(Snowy%20Mountain%20Mini.png);
+		background-size: cover;
+	}
+	100% {
+		background-image: url(Yellow%20Grass%20Mini.png);
+		background-size: cover;
+	}
+}
+
+@keyframes fade {
+	0% {
+		background-color: rgba(255, 255, 255, 1);
+	}
+	100% {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+
+.container:hover {
+	transition: 0.5s;
+	animation: imageslide;
+	animation-duration: 25s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.panel {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+#tycho-logo {
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 14%;
+	max-width: 700px;
+	height: auto;
+	float: initial;
+	transition: 0.3s;
+}
+
+#lower-text {
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 1em;
+	width: 80%;
+}
+
+.small-container {
+	margin-top: 3em; 
+	text-align: center;
+	padding: 0;
+}
