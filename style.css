@@ -1,12 +1,25 @@
+/*Website by Tycho Web*/
+
+
 /*Global*/
 
 html,
 body {
 	margin: 0;
 	height: 100%;
-	overflow: hidden;
-	padding-top: 7em;
+	width: auto;
 	transition: 0.3s;
+	background: red;
+	/* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, CornflowerBlue, SteelBlue);
+	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, CornflowerBlue, SteelBlue);
+	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, CornflowerBlue, SteelBlue);
+	/* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, CornflowerBlue, SteelBlue);
+	/* Standard syntax */
+	overflow: hidden;
 }
 
 
@@ -20,7 +33,6 @@ h5,
 h6,
 p {
 	@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900i|Raleway');
-	
 }
 
 h1,
@@ -35,33 +47,46 @@ h6 {
 h1 {
 	font-style: italic;
 	font-weight: 900;
-	font-size: 50px;
+	font-size: 3em;
 	margin: 0;
 }
 
 p {
 	font-family: 'Raleway', Arial, Times New Roman, sans-serif;
 	margin: 0;
+	font-size: 1em;
 }
+
 
 /*Body*/
 
-#background {
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-	padding: 0;
-	z-index: -9999;
-	position: absolute;
-}
-
 .container {
-	width: 90%;
 	margin: 0 auto;
+	margin-top: 10em;
 	max-width: 800px;
-	height: 50%;
+	height: 32em;
 	transition: 0.5s;
 	border-radius: 50px;
+	animation: imageslide;
+	animation-duration: 25s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#tycho-logo {
+	margin-top: 8em;
+	margin-left: 3em;
+	margin-right: 3em;
+	max-width: 700px;
+	height: auto;
+	float: initial;
+	transition: 0.3s;
+}
+
+#small-container {
+	margin-top: 1em;
+	text-align: center;
+	padding: 0;
 }
 
 
@@ -69,23 +94,15 @@ p {
 
 @keyframes imageslide {
 	0% {
-		background-image: url(white%20mini.png);
-		background-size: cover;
-	}
-	20% {
 		background-image: url(Grand%20Central%20Mini.png);
 		background-size: cover;
 	}
-	40% {
+	33% {
 		background-image: url(Misty%20Richmond%20Mini.png);
 		background-size: cover;
 	}
-	60% {
+	66% {
 		background-image: url(New%20York%20Mini.png);
-		background-size: cover;
-	}
-	80% {
-		background-image: url(Snowy%20Mountain%20Mini.png);
 		background-size: cover;
 	}
 	100% {
@@ -101,40 +118,4 @@ p {
 	100% {
 		background-color: rgba(255, 255, 255, 0);
 	}
-}
-
-.container:hover {
-	transition: 0.5s;
-	animation: imageslide;
-	animation-duration: 25s;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
-
-.panel {
-	width: 100%;
-	margin-bottom: 0;
-}
-
-#tycho-logo {
-	margin-left: 5%;
-	margin-right: 5%;
-	margin-top: 14%;
-	max-width: 700px;
-	height: auto;
-	float: initial;
-	transition: 0.3s;
-}
-
-#lower-text {
-	text-align: center;
-	margin: 0 auto;
-	margin-top: 1em;
-	width: 80%;
-}
-
-.small-container {
-	margin-top: 3em; 
-	text-align: center;
-	padding: 0;
 }
